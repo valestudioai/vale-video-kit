@@ -1,0 +1,197 @@
+<title>Vale Storyboard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap">
+<style>
+/* Layout: one dark editing window. Summary and a proportional beat strip on top, then one row per beat
+   (raw frame, mock frames, then the plan), then the change box. Monochrome first, dusty blue in light. */
+:root {
+  --ground:#151413; --window:#1B1918; --row:#211F1D; --ink:#F2EEE8; --sub:rgba(242,238,232,.58); --line:rgba(242,238,232,.12);
+  --accent:#E6D8BC; --accent-ink:#151413; --chip:rgba(242,238,232,.08); --good:#A9C7A0; --field:#151413;
+  --f-display:"Newsreader", Georgia, "Times New Roman", serif;
+  --f-body:"Hanken Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --f-mono:"DM Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --ground:#E4E4DF; --window:#EDEDE9; --row:#F5F5F2; --ink:#151413; --sub:rgba(21,20,19,.6); --line:rgba(21,20,19,.12);
+  --accent:#3C5182; --accent-ink:#F5F5F2; --chip:rgba(21,20,19,.06); --good:#3F6B3A; --field:#FFFFFF; color-scheme: light; } }
+:root[data-theme="light"] {
+  --ground:#E4E4DF; --window:#EDEDE9; --row:#F5F5F2; --ink:#151413; --sub:rgba(21,20,19,.6); --line:rgba(21,20,19,.12);
+  --accent:#3C5182; --accent-ink:#F5F5F2; --chip:rgba(21,20,19,.06); --good:#3F6B3A; --field:#FFFFFF; color-scheme: light; }
+
+body { background:var(--ground); color:var(--ink); font:15px/1.5 var(--f-body);
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:28px 48px; }
+.win { max-width:1080px; margin:0 auto; background:var(--window); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.bar { display:flex; justify-content:space-between; gap:12px; padding:12px 18px; border-bottom:1px solid var(--line);
+  font:500 12px/1.4 var(--f-mono); letter-spacing:.04em; color:var(--sub); position:sticky; top:env(safe-area-inset-top, 0px); background:var(--window); z-index:2; }
+.bar b { color:var(--ink); font-weight:500; }
+.sum { padding:24px 22px 18px; display:grid; gap:14px; border-bottom:1px solid var(--line); }
+.sum h1 { margin:0; font:500 italic clamp(26px, 4vw, 36px)/1.1 var(--f-display); text-wrap:balance; }
+.dir { margin:0; max-width:65ch; color:var(--sub); }
+.meta { display:flex; flex-wrap:wrap; gap:8px; }
+.chip { font:500 12px/1 var(--f-mono); padding:7px 10px; border-radius:999px; background:var(--chip); color:var(--sub); }
+.chip.st { color:var(--accent); }
+.look { display:grid; grid-template-columns:max-content 1fr; gap:6px 16px; margin:4px 0 0; }
+.look dt, .kv dt { font:500 11px/1.6 var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--sub); }
+.look dd, .kv dd { margin:0; min-width:0; }
+.strip { display:flex; gap:2px; height:30px; margin-top:6px; }
+.strip button { flex-basis:0; min-width:4px; border:0; border-radius:3px; background:var(--chip); cursor:pointer; padding:0;
+  font:500 10px/30px var(--f-mono); color:var(--sub); overflow:hidden; white-space:nowrap; }
+.strip button.big { background:var(--accent); color:var(--accent-ink); }
+.strip button.full { background:color-mix(in srgb, var(--ink) 22%, transparent); color:var(--ink); }
+.strip button:focus-visible, button:focus-visible, textarea:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.legend { display:flex; flex-wrap:wrap; gap:14px; font:500 11px/1 var(--f-mono); color:var(--sub); }
+.legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; vertical-align:-1px; background:var(--chip); }
+.legend i.full { background:color-mix(in srgb, var(--ink) 22%, transparent); } .legend i.big { background:var(--accent); }
+
+.beats { display:grid; gap:10px; padding:14px; }
+.beat { background:var(--row); border:1px solid var(--line); border-radius:10px; padding:14px; display:grid; grid-template-columns:minmax(0, 1.25fr) minmax(0, 1fr); gap:18px; scroll-margin-top:60px; }
+.frames { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; }
+.fr { flex:none; width:120px; display:grid; gap:5px; }
+.fr img { width:120px; height:213px; object-fit:cover; border-radius:6px; background:var(--chip); display:block; }
+.fr span { font:400 11px/1.2 var(--f-mono); color:var(--sub); }
+.plan { min-width:0; display:grid; gap:10px; align-content:start; }
+.head { font:500 12px/1.4 var(--f-mono); color:var(--sub); display:flex; flex-wrap:wrap; gap:4px 10px; }
+.head b { color:var(--ink); font-weight:500; }
+.head .shot::before { content:""; display:inline-block; width:8px; height:8px; border-radius:2px; background:var(--sub); margin-right:6px; vertical-align:0; }
+.head .shot.big::before { background:var(--accent); }
+.say { margin:0; font:400 italic 19px/1.35 var(--f-display); text-wrap:pretty; }
+.do { margin:0; padding-left:18px; display:grid; gap:4px; }
+.kv { display:grid; grid-template-columns:max-content 1fr; gap:4px 14px; margin:0; font-size:14px; }
+.note { display:grid; gap:6px; }
+.note textarea { min-height:44px; }
+.linkish { justify-self:start; background:none; border:0; padding:0; color:var(--accent); font:500 13px/1.4 var(--f-body); cursor:pointer; }
+
+.ask { border-top:1px solid var(--line); padding:22px; display:grid; gap:12px; }
+.ask h2 { margin:0; font:500 italic 24px/1.2 var(--f-display); }
+.ask p { margin:0; color:var(--sub); max-width:65ch; }
+textarea { width:100%; box-sizing:border-box; resize:vertical; min-height:84px; padding:12px 14px; border-radius:8px; border:1px solid var(--line);
+  background:var(--field); color:var(--ink); font:15px/1.45 var(--f-body); }
+.btns { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.btn { border:1px solid var(--line); background:var(--chip); color:var(--ink); padding:11px 18px; border-radius:999px; font:600 14px/1 var(--f-body); cursor:pointer; }
+.btn.go { background:var(--accent); color:var(--accent-ink); border-color:transparent; }
+.btn:disabled { opacity:.45; cursor:default; }
+.msg { font:500 13px/1.4 var(--f-mono); color:var(--good); }
+.hist { display:grid; gap:8px; margin:6px 0 0; padding:0; list-style:none; }
+.hist li { font-size:14px; display:grid; gap:2px; padding:10px 12px; border-radius:8px; background:var(--chip); }
+.hist small { font:400 11px/1.3 var(--f-mono); color:var(--sub); }
+.empty { padding:56px 22px; text-align:center; color:var(--sub); }
+.empty h1 { font:500 italic 30px/1.2 var(--f-display); color:var(--ink); margin:0 0 8px; }
+
+@media (max-width: 760px) {
+  .beat { grid-template-columns:minmax(0, 1fr); }
+  .fr { width:96px; } .fr img { width:96px; height:171px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto !important; } }
+</style>
+
+<div class="win">
+  <div class="bar"><span>vale-studio / <b>storyboard</b></span><span id="ver">loading</span></div>
+  <div id="app">
+    <div class="empty"><h1>No storyboard yet</h1><p>When you ask for a new video, Claude puts its plan here before anything is rendered: every beat, with mock frames.</p></div>
+  </div>
+</div>
+
+<script>
+const $ = (q, el = document) => el.querySelector(q);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const FULL = new Set(["Text card", "Handwritten card", "Animation"]);
+let db = null, user = null, board = null, beats = [], requests = [];
+const beatNotes = {};
+let draft = "";
+
+function shotClass(s) { return s === "Big moment" ? "big" : FULL.has(s) ? "full" : ""; }
+
+function render() {
+  const app = $("#app");
+  if (!board) {
+    $("#ver").textContent = "no board";
+    app.innerHTML = '<div class="empty"><h1>No storyboard yet</h1><p>When you ask for a new video, Claude puts its plan here before anything is rendered: every beat, with mock frames.</p></div>';
+    return;
+  }
+  $("#ver").textContent = `v${board.version} · ${board.beatCount} beats`;
+  const look = board.look || {};
+  const total = beats.reduce((a, b) => a + (b.dur || 0), 0) || 1;
+  app.innerHTML = `
+  <section class="sum">
+    <h1>${esc(board.title)}</h1>
+    <p class="dir">${esc(board.direction)}</p>
+    <div class="meta">
+      <span class="chip">${esc(board.clip)}</span><span class="chip">${board.duration}s after the cut</span>
+      <span class="chip st">${board.status === "approved" ? "Approved" : "Draft, not rendered"}</span>
+    </div>
+    <dl class="look">${Object.entries(look).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>
+    <div class="strip" role="list" aria-label="Beats in order, sized by length">
+      ${beats.map((b) => `<button role="listitem" class="${shotClass(b.shot)}" style="flex-grow:${b.dur}" data-go="${b.id}" title="#${b.order} ${esc(b.shot)} · ${b.dur}s">${b.dur / total > .05 ? "#" + b.order : ""}</button>`).join("")}
+    </div>
+    <div class="legend"><span><i></i>On the speaker</span><span><i class="full"></i>Full-screen card or animation</span><span><i class="big"></i>Big moment</span></div>
+  </section>
+  <section class="beats">${beats.map(beatHTML).join("")}</section>
+  <section class="ask" aria-labelledby="ask-h">
+    <h2 id="ask-h">What do you want to see?</h2>
+    <p>Explain it in a sentence, like "tighter cut, bigger captions" or "make it moody". Notes on single beats go with it. Claude reads this, redraws the storyboard as the next version, and renders nothing until you approve.</p>
+    <textarea id="req" placeholder="Tighter cut, bigger captions.">${esc(draft)}</textarea>
+    <div class="btns">
+      <button class="btn" id="send">Send changes</button>
+      <button class="btn go" id="approve">Approve and render</button>
+      <span class="msg" id="msg" aria-live="polite"></span>
+    </div>
+    ${requests.length ? `<ul class="hist">${requests.map((r) => `<li><span>${r.kind === "approve" ? "Approved" : esc(r.text || "Beat notes")}${r.beatNotes && Object.keys(r.beatNotes).length ? ` <small>+ ${Object.keys(r.beatNotes).length} beat note(s)</small>` : ""}</span><small>v${r.version} · ${new Date(r.at).toLocaleString()}${r.done ? " · " + esc(r.done) : " · waiting for Claude"}</small></li>`).join("")}</ul>` : ""}
+  </section>`;
+  app.querySelectorAll("[data-go]").forEach((el) => el.addEventListener("click", () => document.getElementById(el.dataset.go)?.scrollIntoView({ behavior: "smooth", block: "start" })));
+  app.querySelectorAll("[data-note]").forEach((el) => el.addEventListener("click", () => {
+    const box = document.getElementById("n-" + el.dataset.note); box.hidden = !box.hidden; if (!box.hidden) box.querySelector("textarea").focus();
+  }));
+  app.querySelectorAll(".note textarea").forEach((ta) => ta.addEventListener("input", () => { beatNotes[ta.dataset.beat] = ta.value; }));
+  $("#req").addEventListener("input", (e) => { draft = e.target.value; });
+  $("#send").addEventListener("click", () => submit("changes"));
+  $("#approve").addEventListener("click", () => submit("approve"));
+  if (!db) { $("#send").disabled = $("#approve").disabled = true; $("#msg").textContent = "Open this in claude.ai while signed in to send changes."; }
+}
+
+function beatHTML(b) {
+  const rows = Object.entries(b.rows || {});
+  return `<article class="beat" id="${b.id}">
+    <div class="frames">${(b.frames || []).map((f) => `<figure class="fr" style="margin:0"><img loading="lazy" src="/_blob/${f.asset}" alt="Beat ${b.order}, ${esc(f.label)}"><span>${esc(f.label)}</span></figure>`).join("")}</div>
+    <div class="plan">
+      <div class="head"><b>#${b.order}</b><span>${esc(b.range)} · ${b.dur}s</span><span class="shot ${shotClass(b.shot)}">${esc(b.shot)}</span></div>
+      <p class="say">“${esc(b.say)}”</p>
+      <ul class="do">${(b.do || []).map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
+      ${rows.length ? `<dl class="kv">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
+      <button class="linkish" data-note="${b.id}">${beatNotes[b.id] ? "Edit your note on this beat" : "Change this beat"}</button>
+      <div class="note" id="n-${b.id}" ${beatNotes[b.id] ? "" : "hidden"}><textarea data-beat="${b.id}" id="t-${b.id}" placeholder="e.g. Hold the card longer.">${esc(beatNotes[b.id] || "")}</textarea></div>
+    </div>
+  </article>`;
+}
+
+async function submit(kind) {
+  const text = $("#req").value.trim();
+  const notes = Object.fromEntries(Object.entries(beatNotes).filter(([, v]) => v.trim()));
+  if (kind === "changes" && !text && !Object.keys(notes).length) { $("#msg").textContent = "Write what you want changed first."; return; }
+  $("#send").disabled = $("#approve").disabled = true;
+  try {
+    const at = Date.now();
+    const doc = { kind, text, beatNotes: notes, version: board.version, clip: board.clip, at };
+    try { doc.by = user ? await user.id() : null; } catch {}
+    await db.doc(`requests/${at}`).set(doc);
+    draft = ""; $("#req").value = ""; for (const k in beatNotes) delete beatNotes[k];
+    $("#msg").textContent = kind === "approve" ? "Approved. Tell Claude \"storyboard approved\" to start the render." : "Sent. Tell Claude \"check the storyboard\" and it will draw the next version.";
+  } catch (e) {
+    $("#msg").textContent = "That didn't save. Check you're signed in to claude.ai and try again.";
+  } finally { $("#send").disabled = $("#approve").disabled = false; }
+}
+
+render();
+(async () => {
+  try { db = await window.claude?.use("db"); } catch { db = null; }
+  try { user = await window.claude?.use("user"); } catch { user = null; }
+  if (!db) { $("#ver").textContent = "offline"; render(); return; }
+  db.doc("board/current").onSnapshot((s) => {
+    board = s.exists ? s.data() : null;
+    if (board) db.collection("beats").where("version", "==", board.version).get().then((q) => { beats = q.docs.map((d) => d.data()).sort((a, b) => a.order - b.order); render(); });
+    else render();
+  });
+  db.collection("requests").orderBy("at", "desc").limit(20).onSnapshot((q) => { requests = q.docs.map((d) => d.data()); if (board) render(); });
+})();
+</script>

@@ -1,0 +1,10 @@
+{
+  "name": "vale-video",
+  "version": "0.1.0",
+  "description": "Vale Studio's short-form video kit: the house style, brand, presets, and the transcribe → cut → storyboard → render → Premiere pipeline.",
+  "author": {
+    "name": "Vale Studio",
+    "email": "hello@valestudio.com.au"
+  },
+  "keywords": ["video", "reels", "premiere", "style", "storyboard"]
+}

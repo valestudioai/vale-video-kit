@@ -1,0 +1,15 @@
+{
+  "name": "vale-studio",
+  "description": "Vale Studio's Claude Code plugins for short-form video.",
+  "owner": {
+    "name": "Vale Studio",
+    "email": "hello@valestudio.com.au"
+  },
+  "plugins": [
+    {
+      "name": "vale-video",
+      "source": "./",
+      "description": "Vale Studio's short-form video kit: house style, brand, presets and the reel pipeline."
+    }
+  ]
+}

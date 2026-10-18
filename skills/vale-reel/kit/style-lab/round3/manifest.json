@@ -1,0 +1,351 @@
+{
+  "sections": [
+    {
+      "id": "r3-stack",
+      "name": "Repeated stack: new movement",
+      "use": "You liked the idea but not the effect. Same rows, same safe-zone size, same monochrome card. Only the movement changes, and each uses one of your kept motions with the sound you kept for it. The last one is the same on dusty blue (your Maybe).",
+      "order": 1
+    },
+    {
+      "id": "r3-hand",
+      "name": "Handwritten card: new movement",
+      "use": "You loved the idea but not the left-to-right wipe. Same paper card, blue ink and line over your voice. Only the movement changes, using your kept motions. Each lands with the soft click.",
+      "order": 2
+    },
+    {
+      "id": "r3-light",
+      "name": "Your light scheme",
+      "use": "Round 2's Maybe: pale ground, off-black type, a dusty blue key word. Same words and hard cut; each option changes one thing to settle it. (Blue inside the dark monochrome was dropped, so it stays out.)",
+      "order": 3
+    },
+    {
+      "id": "r3-big",
+      "name": "Big moments",
+      "use": "Both low hits were dropped and the whooshes were kept, so these mark a big moment another way. Same shot, same hard cut to the monochrome card on \"easier\". Only the sound changes. Open one to hear it.",
+      "order": 4
+    },
+    {
+      "id": "r3-split",
+      "name": "Split screen, pushed further",
+      "use": "You kept all three splits. Same walk-and-talk underneath, same hard 940px split and monochrome panel unless noted. Each option changes what the panel shows, with the kept sound that fits its movement. Open one to hear it.",
+      "order": 5
+    },
+    {
+      "id": "r3-anim",
+      "name": "Animations, pushed further",
+      "use": "You kept all four. The first fixes the arrow you flagged; the rest are new explainer moments on the same monochrome card, moving with your kept smooth ease and kept sounds. Same story: one shoot day becomes a month of posts. Open one to hear it.",
+      "order": 6
+    },
+    {
+      "id": "r3-ui",
+      "name": "UI cards, pushed further",
+      "use": "You kept the prompt bars and the notification. Same shot, same top band, same light card landing at 0.8 s with the soft click. Each option adds one thing after it lands. Open one to hear it.",
+      "order": 7
+    }
+  ],
+  "cards": [
+    {
+      "id": "r3-st1",
+      "section": "r3-stack",
+      "label": "Rows rise in",
+      "desc": "Each row rises 28px and fades in, top to bottom, 90 ms apart (your smooth rise), with the soft breath of air under it. Turn on Safe zones to check.",
+      "order": 1,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Breath of air (kept, synthesised)"
+    },
+    {
+      "id": "r3-st2",
+      "section": "r3-stack",
+      "label": "Rows slide up from masks",
+      "desc": "Each row slides up from behind its own mask, 60 ms apart (your snappy mask), with the short whoosh. Turn on Safe zones to check.",
+      "order": 2,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Short whoosh (kept, synthesised)"
+    },
+    {
+      "id": "r3-st3",
+      "section": "r3-stack",
+      "label": "Whole stack pulls into focus",
+      "desc": "The whole stack pulls from blur to sharp at once, then drifts slowly (your filmic focus), with the film click. Turn on Safe zones to check.",
+      "order": 3,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Film click (kept, synthesised)"
+    },
+    {
+      "id": "r3-st4",
+      "section": "r3-stack",
+      "label": "Rows rise in, dusty blue",
+      "desc": "The first option on your dusty blue scheme: dusty blue rows on pale grey-white. Fixes the Maybe on round 2's dusty blue stack. Turn on Safe zones to check.",
+      "order": 4,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Breath of air (kept, synthesised)"
+    },
+    {
+      "id": "r3-h1",
+      "section": "r3-hand",
+      "label": "Hard cut",
+      "desc": "The whole note appears in one frame, like Tom's cut scenes. Nothing moves.",
+      "order": 1,
+      "kind": "video",
+      "mode": "full",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-h2",
+      "section": "r3-hand",
+      "label": "Line by line",
+      "desc": "Each line rises 28px and fades in, 260 ms apart (your smooth rise).",
+      "order": 2,
+      "kind": "video",
+      "mode": "full",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-h3",
+      "section": "r3-hand",
+      "label": "Pulls into focus",
+      "desc": "The note pulls from blur to sharp in 800 ms (your filmic focus), then the sign-off fades in.",
+      "order": 3,
+      "kind": "video",
+      "mode": "full",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-h4",
+      "section": "r3-hand",
+      "label": "Word by word",
+      "desc": "Each word fades in at talking pace, 110 ms apart, like ink landing. No wipe.",
+      "order": 4,
+      "kind": "video",
+      "mode": "full",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-l1",
+      "section": "r3-light",
+      "label": "Warm paper ground",
+      "desc": "The cool pale grey becomes the warm paper of your handwritten card (#F3F1EC). Type and blue word unchanged.",
+      "order": 1,
+      "kind": "video",
+      "mode": "card"
+    },
+    {
+      "id": "r3-l2",
+      "section": "r3-light",
+      "label": "Handwritten blue word",
+      "desc": "The key word is written in blue ink (Caveat) instead of blue Helvetica, bringing in the handwriting you kept.",
+      "order": 2,
+      "kind": "video",
+      "mode": "card"
+    },
+    {
+      "id": "r3-l3",
+      "section": "r3-light",
+      "label": "Blue word, hand underline",
+      "desc": "The blue key word gets a hand-drawn blue underline that draws on after the cut.",
+      "order": 3,
+      "kind": "video",
+      "mode": "card"
+    },
+    {
+      "id": "r3-b1",
+      "section": "r3-big",
+      "label": "Short whoosh into the cut",
+      "desc": "Your kept short whoosh peaks exactly on the cut, under the voice.",
+      "order": 1,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-b2",
+      "section": "r3-big",
+      "label": "Breath of air into the cut",
+      "desc": "Your kept breath of air swells into the cut. Softer, more felt than heard.",
+      "order": 2,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-b3",
+      "section": "r3-big",
+      "label": "Silence",
+      "desc": "No sound effect at all: the voice and the room drop out on the cut, and the card holds in silence. The quiet is the hit.",
+      "order": 3,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice, cut to silence",
+      "voicecut": 1.15
+    },
+    {
+      "id": "r3-b4",
+      "section": "r3-big",
+      "label": "Film click",
+      "desc": "Your kept film click (a shutter double click) lands on the cut.",
+      "order": 4,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-sp1",
+      "section": "r3-split",
+      "label": "Number with a progress line",
+      "desc": "Your Maybe, pushed: the big number counts to 30 while a thin progress line fills under it, with a soft click when it lands. Still simple, but it reads as progress.",
+      "order": 1,
+      "kind": "video",
+      "mode": "shift",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-sp2",
+      "section": "r3-split",
+      "label": "Bar chart grows",
+      "desc": "Instead of the line chart, six bars grow one after another as the number counts to 30; the last bar is cream. Soft click as the last bar lands.",
+      "order": 2,
+      "kind": "video",
+      "mode": "shift",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-sp3",
+      "section": "r3-split",
+      "label": "Stat cards in the panel",
+      "desc": "Your kept stat cards (1 / 30 / 0) stack into the panel above the shot, each landing with the paper slide.",
+      "order": 3,
+      "kind": "video",
+      "mode": "shift",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-sp4",
+      "section": "r3-split",
+      "label": "Prompt bar in the panel",
+      "desc": "Your kept light prompt bar, typing inside the panel instead of over your face. Lands with the soft click.",
+      "order": 4,
+      "kind": "video",
+      "mode": "shift",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-sp5",
+      "section": "r3-split",
+      "label": "Floating card, light",
+      "desc": "Your kept floating card in the light scheme: pale card, dusty blue line, over the softened shot. Soft click as the dot lands.",
+      "order": 5,
+      "kind": "video",
+      "mode": "blurbg",
+      "sound": true,
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r3-an1",
+      "section": "r3-anim",
+      "label": "Handwritten note, arrow fixed",
+      "desc": "Round 2's note and arrow, with the arrow redrawn inside the safe zone and pointing back up at the line. Turn on Safe zones to check.",
+      "order": 1,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Kept sounds (synthesised)"
+    },
+    {
+      "id": "r3-an2",
+      "section": "r3-anim",
+      "label": "Before and after",
+      "desc": "Two columns split by a hairline that draws down: 4 posts a month before, 30 after. Each side rises in and counts up, with a soft click as each lands.",
+      "order": 2,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Kept sounds (synthesised)"
+    },
+    {
+      "id": "r3-an3",
+      "section": "r3-anim",
+      "label": "A month fills in",
+      "desc": "A month calendar on hairlines: thirty days fill in cream one after another while the count climbs to 30 posts. The breath of air under it, a soft click as the last day fills.",
+      "order": 3,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Kept sounds (synthesised)"
+    },
+    {
+      "id": "r3-an4",
+      "section": "r3-anim",
+      "label": "Reach grows, week by week",
+      "desc": "Four bars grow one after another with their numbers (1.2k to 12k); the last bar is cream. A soft click as each lands.",
+      "order": 4,
+      "kind": "video",
+      "mode": "card",
+      "sound": true,
+      "source": "Kept sounds (synthesised)"
+    },
+    {
+      "id": "r3-u1",
+      "section": "r3-ui",
+      "label": "Prompt bar answers",
+      "desc": "After typing, the send button presses and the prompt turns into the answer: \"30 posts, ready to schedule\", with a check. Clicks on the landing and the press.",
+      "order": 1,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-u2",
+      "section": "r3-ui",
+      "label": "Cursor clicks send",
+      "desc": "After typing, a small pointer glides in and clicks send; the button presses. Clicks on the landing and the press.",
+      "order": 2,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-u3",
+      "section": "r3-ui",
+      "label": "Notifications stack up",
+      "desc": "Three enquiries arrive one after another; each new one slides in on top and the older ones tuck behind. A soft click for each.",
+      "order": 3,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    },
+    {
+      "id": "r3-u4",
+      "section": "r3-ui",
+      "label": "Schedule card ticks off",
+      "desc": "A compact \"This week\" card lands, then three posts tick off one by one (Mon reel, Wed carousel, Fri reel). A soft click for each tick.",
+      "order": 4,
+      "kind": "video",
+      "mode": "overlay",
+      "sound": true,
+      "source": "Your voice plus the soft click (kept, synthesised)"
+    }
+  ]
+}

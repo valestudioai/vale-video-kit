@@ -1,0 +1,282 @@
+{
+ "clip": "IMG_9225",
+ "title": "The four types of content",
+ "direction": "Vale style: educational and premium. Teach the four content types clearly, with one big moment.",
+ "look": {
+  "scheme": "Monochrome (warm off-black, warm white, logo cream key word, film grain)",
+  "captions": "Tom: Helvetica Neue Bold, lowercase, 1 to 2 words, white with a soft shadow, key word in logo cream",
+  "grade": "Vale Warm Natural LUT",
+  "sound": "Voice chain to -14 LUFS. Soft click, breath of air, short whoosh and film click (all synthesised, all kept in Style Lab)",
+  "check": "Your white tee: captions sit between chin and logo with a deeper shadow. The cream key word is faint on white, so say if it should go."
+ },
+ "beats": [
+  {
+   "start": 0.93,
+   "end": 5.86,
+   "shot": "Talking head",
+   "frames": [
+    {
+     "kind": "prompt",
+     "at": 3.4,
+     "text": "what should I film this week?"
+    }
+   ],
+   "do": [
+    "Opens straight on the speaker, no intro.",
+    "A light prompt bar drops into the top band at 0.8 s and types the question."
+   ],
+   "rows": {
+    "ui": "Prompt bar, light (Style Lab r2-u1)",
+    "sound": "Soft click as the bar lands"
+   }
+  },
+  {
+   "start": 6.37,
+   "end": 16.36,
+   "shot": "Text card",
+   "frames": [
+    {
+     "kind": "caption",
+     "at": 7.0,
+     "text": "it's much",
+     "key": ""
+    },
+    {
+     "kind": "card",
+     "text": "think big picture.",
+     "key": "big picture.",
+     "idx": "01 / 04"
+    }
+   ],
+   "do": [
+    "Captions on the speaker, then a hard cut to the card on \"big picture\" (raw 9.2 s).",
+    "The words rise in (smooth rise). Back to the speaker on \"than get caught up\"."
+   ],
+   "rows": {
+    "card": "Monochrome, Helvetica Bold lowercase 150px (r1-c1), smooth rise (r1-b2)",
+    "sound": "Breath of air into the card"
+   }
+  },
+  {
+   "start": 17.02,
+   "end": 23.91,
+   "shot": "Big moment",
+   "frames": [
+    {
+     "kind": "card",
+     "text": "four types.",
+     "key": "four",
+     "idx": "02 / 04",
+     "big": true
+    }
+   ],
+   "do": [
+    "Hard cut to the card exactly on \"four\" (raw 22.1 s), held until \"types\" ends."
+   ],
+   "rows": {
+    "card": "Big-moment card, 190px",
+    "sound": "Film click on the cut (r3-b4)"
+   }
+  },
+  {
+   "start": 24.19,
+   "end": 32.77,
+   "shot": "Split screen",
+   "frames": [
+    {
+     "kind": "split",
+     "at": 26.0,
+     "lit": 0
+    }
+   ],
+   "do": [
+    "Split opens: speaker below, the four types listed in the panel above.",
+    "01 Education lights up on \"education\"."
+   ],
+   "rows": {
+    "panel": "Numbered list (r2-m4) in the monochrome split (r2-s1)",
+    "sound": "Soft click as each step lights"
+   }
+  },
+  {
+   "start": 33.83,
+   "end": 40.52,
+   "shot": "Split screen",
+   "frames": [
+    {
+     "kind": "split",
+     "at": 37.0,
+     "lit": 1
+    }
+   ],
+   "do": [
+    "Same split. 02 Entertainment lights on \"entertainment\"."
+   ],
+   "rows": {
+    "sound": "Soft click"
+   }
+  },
+  {
+   "start": 42.06,
+   "end": 49.08,
+   "shot": "Split screen",
+   "frames": [
+    {
+     "kind": "split",
+     "at": 45.0,
+     "lit": 2
+    }
+   ],
+   "do": [
+    "03 Inspirational lights on \"inspirational\"."
+   ],
+   "rows": {
+    "sound": "Soft click"
+   }
+  },
+  {
+   "start": 50.26,
+   "end": 55.5,
+   "shot": "Split screen",
+   "frames": [
+    {
+     "kind": "split",
+     "at": 52.0,
+     "lit": 3
+    }
+   ],
+   "do": [
+    "04 Trending lights on \"trending\". The split closes on \"happening\".",
+    "Cut: the abandoned start \"and I think if you can\" (raw 56.7 s) is removed."
+   ],
+   "rows": {
+    "sound": "Soft click"
+   }
+  },
+  {
+   "start": 59.91,
+   "end": 68.35,
+   "shot": "Big moment",
+   "frames": [
+    {
+     "kind": "caption",
+     "at": 61.0,
+     "text": "match",
+     "key": "match"
+    },
+    {
+     "kind": "card",
+     "text": "so much easier.",
+     "key": "easier.",
+     "idx": "03 / 04",
+     "big": true
+    }
+   ],
+   "do": [
+    "Captions on the speaker, then a hard cut to the card on \"easier\" (raw 65.5 s)."
+   ],
+   "rows": {
+    "card": "Big-moment card",
+    "sound": "Short whoosh peaking on the cut (r3-b1)"
+   }
+  },
+  {
+   "start": 69.05,
+   "end": 75.44,
+   "shot": "Handwritten card",
+   "frames": [
+    {
+     "kind": "hand",
+     "lines": [
+      "know your",
+      "goals first."
+     ]
+    }
+   ],
+   "do": [
+    "Cut to the paper card on \"especially\". The note lands word by word (r3-h4)."
+   ],
+   "rows": {
+    "card": "Blue ink on paper, signed \"\u2014 vale studio\"",
+    "sound": "Soft click"
+   }
+  },
+  {
+   "start": 76.08,
+   "end": 82.1,
+   "shot": "Talking head",
+   "frames": [
+    {
+     "kind": "caption",
+     "at": 81.6,
+     "text": "that's education.",
+     "key": "education."
+    }
+   ],
+   "do": [
+    "Back on the speaker. Captions throughout, \"education\" in logo cream."
+   ],
+   "rows": {
+    "captions": "Tom plus one cream word (r1-d4)"
+   }
+  },
+  {
+   "start": 83.2,
+   "end": 89.52,
+   "shot": "Talking head",
+   "frames": [
+    {
+     "kind": "note",
+     "at": 86.5,
+     "title": "New application",
+     "body": "Jess: love your team's videos. Are you hiring?",
+     "av": "J"
+    }
+   ],
+   "do": [
+    "A notification slides into the top band on \"attract better talent\"."
+   ],
+   "rows": {
+    "ui": "Notification card (r2-u3)",
+    "sound": "Soft click"
+   }
+  },
+  {
+   "start": 95.67,
+   "end": 112.96,
+   "shot": "Talking head",
+   "frames": [
+    {
+     "kind": "caption",
+     "at": 103.6,
+     "text": "some truth",
+     "key": "truth"
+    }
+   ],
+   "do": [
+    "The longest stretch on the speaker. Captions only, no graphics, so the point lands.",
+    "The 6 s pause before this line is cut."
+   ],
+   "rows": {
+    "captions": "Tom, 1 to 2 words"
+   }
+  },
+  {
+   "start": 113.56,
+   "end": 116.84,
+   "shot": "Animation",
+   "frames": [
+    {
+     "kind": "calendar"
+    }
+   ],
+   "do": [
+    "Cut to the month calendar on \"planning\". The days fill in to 30 as the line ends, and the video ends on the full month."
+   ],
+   "rows": {
+    "animation": "A month fills in (r3-an3)",
+    "sound": "Breath of air, soft click on the last day"
+   }
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+  "sections": [
+    {
+      "id": "r2-fix",
+      "name": "Fixes from round 1",
+      "use": "Your Maybes, changed the way your notes said, plus a softer answer to \"punchier on big moments\" since the punchy hit was dropped.",
+      "order": 1
+    },
+    {
+      "id": "r2-colour",
+      "name": "Colour: monochrome with dusty blue",
+      "use": "You kept Monochrome and Dusty blue. Same card, words and hard cut as round 1's monochrome; each option changes one thing to bring the blue in.",
+      "order": 2
+    },
+    {
+      "id": "r2-split",
+      "name": "Split screen with animation",
+      "use": "Your footage below, an animation above (Gannon, Cooperson, RPN). Same clip, same chart, same timing. Each option changes one thing. Open one to hear it.",
+      "order": 3
+    },
+    {
+      "id": "r2-anim",
+      "name": "Animations on a plain background",
+      "use": "Full-screen explainer moments on the monochrome card, all moving with your kept smooth ease and carrying your kept sounds. Same story in each: one shoot day becomes a month of posts. Open one to hear it.",
+      "order": 4
+    },
+    {
+      "id": "r2-pin",
+      "name": "A style from your Pinterest",
+      "use": "Five treatments taken straight from your VALE, BRAND and Creative boards, on the same walk-and-talk shot and the same line. Open one to hear it.",
+      "order": 6
+    },
+    {
+      "id": "r2-ui",
+      "name": "UI cards over footage",
+      "use": "From justyn.ai: interface cards that sit on the shot, with polish and warmth. Same clip, same spot in the top band, same landing at 0.8 s with your kept soft click. Each option changes the card. Open one to hear it.",
+      "order": 5
+    }
+  ],
+  "cards": [
+    {
+      "id": "r2-f1",
+      "section": "r2-fix",
+      "label": "Repeated stack, inside the safe zone",
+      "desc": "Fixes \"not in safe zone\": the rows grow to a 96px max so the widest fits inside the Reels safe area, with nothing under the buttons. Turn on Safe zones to check.",
+      "order": 1,
+      "kind": "video"
+    },
+    {
+      "id": "r2-f2",
+      "section": "r2-fix",
+      "label": "Whoosh, shorter and softer",
+      "desc": "The whoosh cut to 320 ms and pulled down to a 1.4 kHz peak so it sits under the voice. Now on your kept snappy mask, peaking as the words land.",
+      "order": 2,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-f2.wav"
+    },
+    {
+      "id": "r2-f3",
+      "section": "r2-fix",
+      "label": "Whoosh, a breath of air",
+      "desc": "A longer, very low and soft air sweep (700 ms, 900 Hz peak), more felt than heard. On your kept smooth rise.",
+      "order": 3,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-f3.wav"
+    },
+    {
+      "id": "r2-f4",
+      "section": "r2-fix",
+      "label": "Big moment, softer",
+      "desc": "Instead of the dropped punchy hit: a short, round 70 Hz thud with a paper tap, no shake. Weight without noise, for the line that matters.",
+      "order": 4,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-f4.wav"
+    },
+    {
+      "id": "r2-a1",
+      "section": "r2-colour",
+      "label": "Blue key word",
+      "desc": "Monochrome, but the key word is a light dusty blue (#9DB0DA) instead of logo cream.",
+      "order": 1,
+      "kind": "video"
+    },
+    {
+      "id": "r2-a2",
+      "section": "r2-colour",
+      "label": "Blue-black ground",
+      "desc": "The background shifts from warm off-black to a deep blue-black (#121722). Type and cream word unchanged.",
+      "order": 2,
+      "kind": "video"
+    },
+    {
+      "id": "r2-a3",
+      "section": "r2-colour",
+      "label": "Light ground, blue word",
+      "desc": "Flipped: pale grey-white ground, off-black type, dusty blue key word (#3C5182).",
+      "order": 3,
+      "kind": "video"
+    },
+    {
+      "id": "r2-a4",
+      "section": "r2-colour",
+      "label": "Blue details only",
+      "desc": "Monochrome card, cream key word, but the label, index and hairline turn dusty blue. The blue as a quiet accent.",
+      "order": 4,
+      "kind": "video"
+    },
+    {
+      "id": "r2-s1",
+      "section": "r2-split",
+      "label": "Monochrome panel, chart",
+      "desc": "Hard split at 940px. Warm off-black panel; the line chart draws itself while the number counts to 30. Line draw borrows the stroke-dash technique from the ideas library (ik-builds-585923).",
+      "order": 1,
+      "kind": "video",
+      "sound": true,
+      "mode": "shift"
+    },
+    {
+      "id": "r2-s2",
+      "section": "r2-split",
+      "label": "Light panel, dusty blue chart",
+      "desc": "The same split and chart on a pale grey-white panel with a dusty blue line.",
+      "order": 2,
+      "kind": "video",
+      "sound": true,
+      "mode": "shift"
+    },
+    {
+      "id": "r2-s3",
+      "section": "r2-split",
+      "label": "Floating card",
+      "desc": "Instead of a hard split, the chart sits on a rounded card floating over a softened, dimmed copy of the shot. Gannon-style.",
+      "order": 3,
+      "kind": "video",
+      "sound": true,
+      "mode": "blurbg"
+    },
+    {
+      "id": "r2-s4",
+      "section": "r2-split",
+      "label": "Monochrome panel, number only",
+      "desc": "The same hard split, but just the number counting up to 30, huge, with no chart. Simpler.",
+      "order": 4,
+      "kind": "video",
+      "sound": true,
+      "mode": "shift"
+    },
+    {
+      "id": "r2-m1",
+      "section": "r2-anim",
+      "label": "Chart draws on",
+      "desc": "A line chart draws itself as the number counts to 30, then a soft click as the end dot lands. Line draw: stroke-dash (ik-builds-585923).",
+      "order": 1,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-m1.wav"
+    },
+    {
+      "id": "r2-m2",
+      "section": "r2-anim",
+      "label": "Stat cards stack in",
+      "desc": "Three cards slide up and land one after another, each with a soft paper slide: 1 day, 30 posts, 0 stress.",
+      "order": 2,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-m2.wav"
+    },
+    {
+      "id": "r2-m3",
+      "section": "r2-anim",
+      "label": "Handwritten note draws on",
+      "desc": "The statement cuts in, then a handwritten note writes itself on with a hand-drawn arrow, with a film click as it starts.",
+      "order": 3,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-m3.wav"
+    },
+    {
+      "id": "r2-m4",
+      "section": "r2-anim",
+      "label": "Numbered list builds",
+      "desc": "A four-step list with hairlines drawing in; each step lights up in turn with a soft click: plan, film, edit, post.",
+      "order": 4,
+      "kind": "video",
+      "sound": true,
+      "source": "Synthesised in code by Claude / r2-m4.wav"
+    },
+    {
+      "id": "r2-p1",
+      "section": "r2-pin",
+      "label": "B&W cinematic",
+      "desc": "The shot in black and white with heavy grain and a tape timecode counting, like your \"TCR 00:48:18.25 PLAY LOCK\" pin. Caption is Tom-style in ink with a soft glow so it reads on the white tee.",
+      "order": 1,
+      "kind": "video",
+      "sound": true,
+      "mode": "bw",
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r2-p2",
+      "section": "r2-pin",
+      "label": "Printed photo",
+      "desc": "The shot as a print: cream border, blue-ink handwriting writing itself on in the margin, a small date. Analog, from your BRAND board.",
+      "order": 2,
+      "kind": "video",
+      "sound": true,
+      "mode": "frame",
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r2-p3",
+      "section": "r2-pin",
+      "label": "Handwritten card",
+      "desc": "A full-screen paper card where blue ink writes the line on, like \"Act like the person you want to become\". No footage.",
+      "order": 3,
+      "kind": "video",
+      "sound": true,
+      "mode": "full",
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r2-p4",
+      "section": "r2-pin",
+      "label": "Dusty blue stack",
+      "desc": "\"IT'S ALREADY YOURS\" made Vale's: the line repeating and growing in dusty blue on pale grey, rows cutting in one by one, all inside the safe zone.",
+      "order": 4,
+      "kind": "video",
+      "sound": true,
+      "mode": "full",
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r2-p5",
+      "section": "r2-pin",
+      "label": "Retro sticker",
+      "desc": "A cream print sticker with the sun mark, slapped onto the shot at a slight angle. From your Creative board's stickers and matchbooks.",
+      "order": 5,
+      "kind": "video",
+      "sound": true,
+      "mode": "overlay",
+      "source": "Your voice plus a kept sound (synthesised)"
+    },
+    {
+      "id": "r2-u1",
+      "section": "r2-ui",
+      "label": "Prompt bar, light",
+      "desc": "A cream prompt bar drops in and types the line, with a round dark send button. justyn.ai's prompt bar in Vale colours.",
+      "order": 1,
+      "kind": "video",
+      "sound": true,
+      "source": "Soft click (kept, synthesised) under your voice"
+    },
+    {
+      "id": "r2-u2",
+      "section": "r2-ui",
+      "label": "Prompt bar, dark",
+      "desc": "The same prompt bar in the monochrome dark card with a cream send button.",
+      "order": 2,
+      "kind": "video",
+      "sound": true,
+      "source": "Soft click (kept, synthesised) under your voice"
+    },
+    {
+      "id": "r2-u3",
+      "section": "r2-ui",
+      "label": "Notification card",
+      "desc": "A phone-style notification slides down: \"New enquiry\" from a builder, with an initial avatar. Shows the result, not the tool.",
+      "order": 3,
+      "kind": "video",
+      "sound": true,
+      "source": "Soft click (kept, synthesised) under your voice"
+    },
+    {
+      "id": "r2-u4",
+      "section": "r2-ui",
+      "label": "Pill label",
+      "desc": "A small white pill drops in with one bold number. The lightest touch: \"1 day of filming\".",
+      "order": 4,
+      "kind": "video",
+      "sound": true,
+      "source": "Soft click (kept, synthesised) under your voice"
+    }
+  ]
+}
