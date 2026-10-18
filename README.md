@@ -18,7 +18,7 @@ In Claude Code:
 /plugin install vale-video@vale-studio
 ```
 
-Then, in a project folder, ask Claude to "set up a Vale video project". The vale-reel skill copies the kit into the project and checks your tools.
+Then open an empty project folder in Claude Code and paste in [SETUP-PROMPT.md](SETUP-PROMPT.md). Claude sets up the kit, checks your tools, builds your own house style from your references into `STYLE.md` over a few Style Lab rounds, and then edits your first video.
 
 ## Requirements
 
