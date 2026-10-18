@@ -14,7 +14,7 @@ The kit also includes the brand files and fonts, the LUT, the audio and export p
 In Claude Code:
 
 ```
-/plugin marketplace add <github-user>/vale-video-kit
+/plugin marketplace add valestudioai/vale-video-kit
 /plugin install vale-video@vale-studio
 ```
 
