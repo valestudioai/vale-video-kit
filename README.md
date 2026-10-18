@@ -26,9 +26,15 @@ Then open an empty project folder in Claude Code and paste in [SETUP-PROMPT.md](
 - ffmpeg and ffprobe.
 - Python 3.11 with a WhisperX venv, for transcription.
 - Node 22+ and Google Chrome, for animation renders.
-- Adobe Premiere Pro 2025 or 2026, for the Premiere step (optional).
+- For finishing (optional), one of these:
+  - Adobe Premiere Pro 2025 or 2026 (tested)
+  - DaVinci Resolve Studio 21.1+, or Resolve free
+  - Final Cut Pro
+  - CapCut
 
-See `skills/vale-reel/SKILL.md` and `skills/vale-reel/PREMIERE.md` for details.
+  The Resolve, Final Cut and CapCut routes are written but not yet tested.
+
+See `skills/vale-reel/SKILL.md`, `PREMIERE.md` and `FINISHING.md` for details.
 
 ## Licences
 

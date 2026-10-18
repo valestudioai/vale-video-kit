@@ -26,7 +26,21 @@ This kit is built for macOS. Check for:
 Tell me what's missing and the command to install it. Don't install anything without asking me first.
 
 ## 3. Ask where I finish
-Ask whether I use Adobe Premiere Pro, or want a finished MP4 instead.
+Ask which of these I use. Say which routes are tested and which aren't yet.
+- **Adobe Premiere Pro** (tested): you drive the app live.
+- **DaVinci Resolve Studio 21.1 or newer** (untested): you drive the app live through Resolve's built-in AI connector. Ask whether I have Studio or free, and which version (DaVinci Resolve > About). If I have an older Studio, tell me to update first.
+- **DaVinci Resolve free** (untested): it can't be driven, so I get a layered handoff.
+- **Final Cut Pro** (untested): you write the edit as an FCPXML file that opens as a new library.
+- **CapCut** (untested): I get a layered handoff, meaning a finished MP4 plus the graded cut, graphics, captions and sound effects as separate files to stack.
+- **No app** (tested): I get a finished MP4.
+
+For Resolve Studio:
+- Follow FINISHING.md in the vale-reel skill.
+- Tell me to run File > Setup AI Assistants, create a NEW, empty project, save it under a real name, keep it open, and restart Claude Code.
+- Prove the connection: add a marker "Claude was here" on a test timeline, read it back, then delete the test timeline.
+- Never write into a project that holds other work.
+
+For Final Cut, CapCut, free Resolve or no app, there's nothing to connect.
 
 For Premiere:
 - Follow the vale-reel skill's PREMIERE.md to clone, build and register the connector.
@@ -89,11 +103,11 @@ Run the vale-reel pipeline on a real clip, with all looks taken from my STYLE.md
 2. Cut. Show me the kept text and stop until I approve it.
 3. Storyboard every beat. Stop until I approve it.
 4. Render.
-5. Build it in Premiere (or deliver the MP4).
+5. Finish it in my app (PREMIERE.md for Premiere, FINISHING.md for everything else).
 
-Adapt the kit's scripts (scripts/storyboard.py, presets/graphics/vale_graphics.py, the render and premiere example scripts in storyboard/) to my style instead of Vale's colours and fonts. Every cut must be a real edit point I can trim. Check what landed against the cut list, frame for frame.
+Adapt the kit's scripts (scripts/storyboard.py, presets/graphics/vale_graphics.py, the render and premiere example scripts in storyboard/) to my style instead of Vale's colours and fonts. In Premiere, Resolve Studio and Final Cut, every cut must be a real edit point I can trim. Check what landed against the cut list, frame for frame. For a layered handoff, ffprobe every file and confirm the layers are all the same length.
 
-When the video is done, tell me plainly what still needs a human: cut points that clip a word, captions that collide with my face, anything you couldn't verify.
+When the video is done, tell me plainly what still needs a human: cut points that clip a word, captions that collide with my face, anything you couldn't verify. If my app's route was untested, say what worked and what didn't, and note it in CLAUDE.md.
 
 ## How to work
 - Just do it. Don't ask permission to create folders, write scripts or run commands. Execute, then report.
@@ -103,7 +117,7 @@ When the video is done, tell me plainly what still needs a human: cut points tha
   - my reference files
   - rating each Style Lab round
   - approving the cut and the storyboard
-  - any click in Premiere
+  - any click in my editing app
 - If something fails twice, stop and tell me.
 - When you learn something non-obvious about my footage, setup or taste, write it in this folder's CLAUDE.md. Style decisions go in STYLE.md.
 

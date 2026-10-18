@@ -1,6 +1,6 @@
 ---
 name: vale-reel
-description: Edit a vertical talking-head clip into a Vale Studio reel — set up the project kit, transcribe with WhisperX, build a tight cut, storyboard every beat for approval, render graphics/captions/sound in the Vale style, and assemble in Adobe Premiere Pro over the Premiere MCP connector. Use when the user wants to edit, cut, storyboard, caption or render a reel, or set up a new Vale video project.
+description: Edit a vertical talking-head clip into a Vale Studio reel — set up the project kit, transcribe with WhisperX, build a tight cut, storyboard every beat for approval, render graphics/captions/sound in the Vale style, and finish in Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro or CapCut (or as a finished MP4). Use when the user wants to edit, cut, storyboard, caption or render a reel, or set up a new Vale video project.
 ---
 
 # Vale reel pipeline
@@ -16,7 +16,7 @@ The scripts expect to live inside the project, with `raw/`, `transcript/`, `rend
 3. Make `raw/`, `transcript/`, `renders/`, `references/`.
 4. Check the tools (see "Requirements" below) and tell the user what's missing. Don't install system packages without asking.
 5. Install the fonts in `brand/fonts/` (macOS: copy to `~/Library/Fonts`). Helvetica Neue ships with macOS.
-6. For Premiere work, follow `PREMIERE.md` in this skill's folder.
+6. Ask where the user finishes. Premiere: follow `PREMIERE.md`. DaVinci Resolve (Studio or free), Final Cut Pro or CapCut: follow `FINISHING.md`. No app: the finished MP4 from step 5 is the deliverable.
 
 ## Pipeline for a new clip
 
@@ -32,7 +32,7 @@ Put the clip in `raw/<clip>.<ext>`. All commands run from the project root.
    5. **Render only after the user approves.**
 4. **Voice:** `presets/audio/vale_voice.sh raw/<clip>.mp4 <out.wav>` (80 Hz HPF, denoise, de-ess, 2.5:1, -14 LUFS / -1 dBTP), then mux into `renders/<clip>_master.*`.
 5. **Render:** write `storyboard/<clip>/render_v<N>.py` from the example in `kit/storyboard/IMG_9225/render_v1.py`. It builds `base.mp4` (cut + LUT + any split shift), one transparent `timeline.html` overlay captured frame by frame with `style-lab/render/render.mjs` (headless Chrome over CDP), and `sfx.wav` from the synthesised sounds in `style-lab/round*/`. Composite at constant frame rate (`-fps_mode cfr`; without it frames drop at card cuts) and finish at -14 LUFS.
-6. **Premiere (optional):** write `storyboard/<clip>/premiere_v<N>.py` from `kit/storyboard/IMG_9225/premiere_v1.py` (render → encode → plan), then build the sequence with the connector as described in `PREMIERE.md`. V1 speaker, V2 graphics, V3 captions, A2 sfx, then `apply_lut` per V1 clip.
+6. **Finish in the user's app.** Other apps: follow `FINISHING.md` (Resolve Studio live, Final Cut via FCPXML, CapCut and free Resolve via a layered handoff; all untested so far). Premiere: write `storyboard/<clip>/premiere_v<N>.py` from `kit/storyboard/IMG_9225/premiere_v1.py` (render → encode → plan), then build the sequence with the connector as described in `PREMIERE.md`. V1 speaker, V2 graphics, V3 captions, A2 sfx, then `apply_lut` per V1 clip.
 
 Older single-pass styles (`scripts/render_style.py <style> <clip>`, `presets/styles/*`) still work but are reference only; `STYLE.md` wins.
 
@@ -46,5 +46,5 @@ Older single-pass styles (`scripts/render_style.py <style> <clip>`, `presets/sty
 
 - macOS, Apple Silicon tested. ffmpeg/ffprobe on PATH. Python 3.11 (uv works well) with a WhisperX venv for transcription; numpy for the render scripts.
 - Google Chrome at `/Applications/Google Chrome.app` and Node 22+ (built-in WebSocket) for `render.mjs`. No npm installs.
-- Adobe Premiere Pro 2025/2026 only for step 6.
+- For step 6, one of: Adobe Premiere Pro 2025/2026 (tested), DaVinci Resolve Studio 21.1+ or free, Final Cut Pro, CapCut (untested), or none.
 - Reference videos for study go in `references/`; extract frames to study them, never copy their assets. `kit/references/NOTES.md` lists the reels the style was built from.
